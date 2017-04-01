@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.android.order">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".newPurchase"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".catOne"
+            android:parentActivityName=".newPurchase" />
+        <activity
+            android:name=".Page1"
+            android:parentActivityName=".catOne" />
+        <activity
+            android:name=".Page2"
+            android:parentActivityName=".catOne" />
+        <activity
+            android:name=".Page3"
+            android:parentActivityName=".catOne" />
+        <activity
+            android:name=".catTwo"
+            android:parentActivityName=".newPurchase" />
+        <activity
+            android:name=".Page12"
+            android:parentActivityName=".catTwo" />
+        <activity
+            android:name=".Page22"
+            android:parentActivityName=".catTwo" />
+        <activity
+            android:name=".Page32"
+            android:parentActivityName=".catTwo" />
+        <activity android:name=".confirmPurchase" />
+        <activity android:name=".myPurchase"></activity>
+    </application>
+
+</manifest>
