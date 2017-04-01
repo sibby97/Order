@@ -1,6 +1,6 @@
 # Order
-##Order Purchase System
-###User Interface
+## Order Purchase System
+### User Interface
 The main page contains two options, to go to place new order, or to see my orders.
 In the Place New Order page, there are two options, to go in Category 1, or go in Category 2.
 In both the pages, user can scroll through the tabbed views to select objects, 
