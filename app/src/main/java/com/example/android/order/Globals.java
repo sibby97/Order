@@ -9,8 +9,7 @@ public class Globals{
     // Global variable
     private int data;
     private int count;
-    private String[] stck;
-    private String[] prc;
+    private static int[] value = new int[100];
     private int[] confdata = new int[50];
     private int confcount;
 
@@ -41,14 +40,26 @@ public class Globals{
         return this.data;
     }
     public int getConfdata(int i){ return this.confdata[i]; }
-    public void setStrings(String s, String p){
-        this.stck[count-1] = s;
-        this.prc[count-1] = p;
+
+    public void incValue(int pos){
+        value[pos]++;
     }
+    public void decValue(int pos){
+        if(value[pos]>0)
+        value[pos]--;
+    }
+
+    public int getValue(int pos){
+        return value[pos];
+    }
+
 
     public static synchronized Globals getInstance(){
         if(instance==null){
             instance=new Globals();
+            for(int i=0;i<100;i++){
+                value[i] = 0;
+            }
         }
         return instance;
     }

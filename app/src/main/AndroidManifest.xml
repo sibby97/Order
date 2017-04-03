@@ -42,8 +42,8 @@
         <activity
             android:name=".Page32"
             android:parentActivityName=".catTwo" />
-        <activity android:name=".confirmPurchase" />
-        <activity android:name=".myPurchase"></activity>
+        <activity android:name=".confirmPurchase" android:parentActivityName=".newPurchase" />
+        <activity android:name=".myPurchase" android:parentActivityName=".MainActivity"></activity>
     </application>
 
 </manifest>

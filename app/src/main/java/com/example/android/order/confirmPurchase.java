@@ -15,14 +15,26 @@ public class confirmPurchase extends AppCompatActivity {
         setContentView(R.layout.activity_confirm_purchase);
         TextView conftext = (TextView) findViewById(R.id.conftext);
         Globals g = Globals.getInstance();
-        String input = "Your total Purchase costs"+g.getData();
+        String[] price = getResources().getStringArray(R.array.prices);
+        String[] stock = getResources().getStringArray(R.array.stock);
+        String input = "Your total Purchase costs: ";
+        int x = 0 ,total = 0;
+        for(int i =0;i<100;i++){
+            if(g.getValue(i)>0) {
+                x = g.getValue(i) * Integer.parseInt(price[i]);
+                input += "\n" + " for the product " + stock[i] + " = " + x;
+                total += x;
+            }
+        }
+        input += "\n" + " Your total purchase is = "+total;
         conftext.setText(input);
         Button button2 = (Button) findViewById(R.id.button2);
+        final int finalTotal = total;
         button2.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v) {
                 Globals g = Globals.getInstance();
                 g.setConfcount();
-                g.setConfData(g.getData(),g.getConfcount());
+                g.setConfData(finalTotal,g.getConfcount());
                 Intent intent = new Intent(confirmPurchase.this, MainActivity.class);
                 startActivity(intent);
             }});
