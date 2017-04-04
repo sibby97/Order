@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1">
+    <TextView
+        android:id="@+id/product"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="8dip"
+        android:paddingLeft="8dip"
+        android:paddingBottom="4dip"
+        android:textSize="20dip"
+        android:textStyle="bold"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_weight="0.03">
+    <TextView android:id="@+id/price"
+        android:layout_height="wrap_content"
+        android:layout_width="200dp"
+        android:paddingLeft="8dip"
+        android:paddingBottom="6dip"
+        android:textSize="15dip"
+        android:layout_below="@id/product"/>
+        <TextView
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:id="@+id/val"/>
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/increment"
+            android:layout_gravity="right"
+            android:gravity="right"
+            android:text="+"
+            android:textAlignment="center"/>
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/decrement"
+            android:layout_gravity="right"
+            android:gravity="right"
+            android:text="-"
+            android:textAlignment="center"/>
+        </LinearLayout>
+</LinearLayout>
